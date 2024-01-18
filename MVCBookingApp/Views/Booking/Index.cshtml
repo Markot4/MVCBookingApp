@@ -1,0 +1,23 @@
+﻿@model List<MVCBookingApp.Models.HotelBooking>
+
+<h1 style="text-align: center;">Booking List</h1>
+
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+    <thead>
+        <tr style="background-color: #FF0900;">
+            <th style="padding: 8px; border: 1px solid #000;">ID</th>
+            <th style="padding: 8px; border: 1px solid #000;">Guest Name</th>
+            <th style="padding: 8px; border: 1px solid #000;">Room Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hotelBooking in Model)
+        {
+            <tr style="background-color: #fff;">
+                <td style="padding: 8px; border: 1px solid #000;">@hotelBooking.Id</td>
+                <td style="padding: 8px; border: 1px solid #000;">@hotelBooking.GuestName</td>
+                <td style="padding: 8px; border: 1px solid #000;">@hotelBooking.RoomNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
